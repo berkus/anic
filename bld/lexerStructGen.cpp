@@ -90,7 +90,7 @@ int main() {
 	fprintf(out, "#define _LEXER_STRUCT_H_\n\n");
 	fprintf(out, "#include \"../src/lexer.h\"\n\n");
 	// print out token definitions to the .h
-	fprintf(out, "#define NUM_TOKENS %u\n\n", (unsigned int)tokenMap.size());
+	fprintf(out, "#define NUM_TOKENS %u\n\n", ((unsigned int)tokenMap.size() + 1)); // plus 1 due to Token_END
 	for (map<string,int>::iterator queryBuf = tokenMap.begin(); queryBuf != tokenMap.end(); queryBuf++) {
 		fprintf(out, "#define TOKEN_%s %d\n", queryBuf->first.c_str(), queryBuf->second);
 	}

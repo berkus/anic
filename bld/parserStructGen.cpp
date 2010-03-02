@@ -89,7 +89,7 @@ int main() {
 	}
 	// print out the definition of the number of nonterminals
 	fprintf(out, "\n");
-	fprintf(out, "#define NUM_NONTERMS %d\n\n", (1 + nonTermCount));
+	fprintf(out, "#define NUM_NONTERMS %d\n\n", nonTermCount);
 	// print out the definition for the total label count
 	fprintf(out, "#define NUM_LABELS NUM_TOKENS + NUM_NONTERMS\n\n");
 	// print out the epilogue into the .h
